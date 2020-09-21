@@ -1,0 +1,17 @@
+<h2 class="text-center">{{ title }}</h2>
+<ul class="list-group">
+  {{#each studyYear }}
+  <table class="table table-striped">
+    <a href="year/{{ id }}" class="list-group-item text-center">{{ studyYear }}</a>
+  </table>
+  {{/each}}
+</ul>
+
+<form action="/year" class="form" method="POST">
+  <div class="form-group">
+    <label for="title text-center">Új tanév hozzáadása
+    </label>
+    <input type="text" class="form-control" name="newstudyYear" id="newStudyYear" placeholder="Írja be az új tanévet">
+  </div>
+  <button type="submit" class="btn btn-default btn-success">Tanév létrehozása</button>
+</form>

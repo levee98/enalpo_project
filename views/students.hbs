@@ -1,0 +1,24 @@
+<h2>A(z) {{ title }} osztály tanulói:</h2>
+<ul class="list-group">
+
+  {{#each students}}
+  <table class="table table-striped">
+    <p>Név:
+      <a href="/year/{{ yearId }}/class/{{ classId }}/students/{{ id }}" class="list-group-item text-center">
+        {{ firstName }}
+        {{ lastName }}</a>
+    </p>
+  </table>
+  {{/each}}
+
+</ul>
+
+<form action="/students" class="form" method="POST">
+  <div class="form-group">
+    <label for="title">Vegyen fel új tanulót az osztályba:
+    </label>
+    <input type="text" class="form-control" name="newStudent" id="newStudent"
+      placeholder="Kérem írja be az új tanuló nevét!">
+  </div>
+  <button type="submit" class="btn btn-default btn-success">Új tanuló létrehozása</button>
+</form>

@@ -1,0 +1,55 @@
+<h2>{{ title }} tanuló adatai:</h2>
+<ul class="list-group">
+
+  {{#each student}}
+  <table class="table table-striped">
+    <p>
+      <li class="list-group-item text-center">
+        {{ firstName }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ lastName }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ birthPlace }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ birthDate }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ nameOfMother }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ email }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ telephoneNumber }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ city }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ postCode }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ address }}
+      </li>
+      <li class="list-group-item text-center">
+        {{ image }}
+      </li>
+      </a>
+    </p>
+  </table>
+  {{/each}}
+
+</ul>
+
+<form action="/students" class="form" method="POST">
+  <div class="form-group">
+    <label for="title">Vegyen fel új tanulót az osztályba:
+    </label>
+    <input type="text" class="form-control" name="newStudent" id="newStudent"
+      placeholder="Kérem írja be az új tanuló nevét!">
+  </div>
+  <button type="submit" class="btn btn-default btn-success">Új tanuló létrehozása</button>
+</form>

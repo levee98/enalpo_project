@@ -1,0 +1,25 @@
+<h2>A(z) {{ title }} tanév osztályai:</h2>
+<ul class="list-group">
+
+  {{#each classes}}
+  <table class="table table-striped ">
+    <a href="./{{ studyYear_id }}/class/{{ id }}" class="list-group-item text-center">{{ class }}</a>
+  </table>
+  {{/each}}
+
+</ul>
+
+{{!-- <a type="button" class="btn btn-default btn-primary" href="/studyYear/newStudyYear">
+  Add new class to the studyyear
+</a> --}}
+
+<form action="./year/{{id}}/class" class="form" method="POST">
+  <div class="form-group">
+    <label for="title">Adjon hozzá új osztályt az évfolyamhoz
+    </label>
+    <input type="text" class="form-control" name="newclass" id="newclass"
+      placeholder="Kérem, írja be az új osztály megnevezését!">
+    <input type="text" class="form-control" name="newclass" id="newclass_id" placeholder="Adja meg a tanévet">
+  </div>
+  <button type="submit" class="btn btn-default btn-success">Osztály hozzáadása a(z) {{ title }} tanévhez.</button>
+</form>

@@ -1,0 +1,12 @@
+body {
+  justify-content: center;
+  margin-top: 3em;
+  padding: 50px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font: 14px 'Montserrat Alternates', sans-serif;
+  background-color: brown;
+}
+
+a {
+  color: #00B7FF;
+}
