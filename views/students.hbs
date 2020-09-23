@@ -3,8 +3,10 @@
 
   {{#each students}}
   <table class="table table-striped">
-    <a href="/year/{{ yearId }}/class/{{ classId }}/students/{{ id }}" class="list-group-item text-center">
+    <p>
       Név:
+    </p>
+    <a href="/year/{{ yearId }}/class/{{ classId }}/students/{{ id }}" class="list-group-item text-center">
       {{ firstName }}
       {{ lastName }}</a>
   </table>

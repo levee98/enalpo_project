@@ -5,34 +5,28 @@
   <table class="table table-striped">
     <p>
       <li class="list-group-item text-center">
-        {{ firstName }}
+        Név: {{ firstName }} {{ lastName }}
       </li>
       <li class="list-group-item text-center">
-        {{ lastName }}
+        Születési hely: {{ birthPlace }}
       </li>
       <li class="list-group-item text-center">
-        {{ birthPlace }}
+        Születési dátum: {{ birthDate }}
       </li>
       <li class="list-group-item text-center">
-        {{ birthDate }}
+        Anyja neve: {{ nameOfMother }}
       </li>
       <li class="list-group-item text-center">
-        {{ nameOfMother }}
+        E-mail címe: {{ email }}
       </li>
       <li class="list-group-item text-center">
-        {{ email }}
+        Telefonszáma: {{ telephoneNumber }}
       </li>
       <li class="list-group-item text-center">
-        {{ telephoneNumber }}
+        {{ postCode }} {{ city }}
       </li>
       <li class="list-group-item text-center">
-        {{ city }}
-      </li>
-      <li class="list-group-item text-center">
-        {{ postCode }}
-      </li>
-      <li class="list-group-item text-center">
-        {{ address }}
+        Cím: {{ address }}
       </li>
       <li class="list-group-item text-center">
         {{ image }}
@@ -44,7 +38,7 @@
 
 </ul>
 
-<form action="/students" class="form" method="POST">
+{{!-- <form action="/students" class="form" method="POST">
   <div class="form-group">
     <label for="title">Vegyen fel új tanulót az osztályba:
     </label>
@@ -52,4 +46,4 @@
       placeholder="Kérem írja be az új tanuló nevét!">
   </div>
   <button type="submit" class="btn btn-default btn-success">Új tanuló létrehozása</button>
-</form>
+</form> --}}
