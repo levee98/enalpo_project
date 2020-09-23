@@ -89,21 +89,24 @@ router.post('/', async (req, res, next) => {
   // }
 });
 
-// router.post('/:id', async (req, res, next) => {
-//   console.log(req.body);
+router.post('/:id', async (req, res, next) => {
+  console.log(req.body);
 
-//   const newclass = {
-//     class: req.body.newclass,
-//     id: req.body.newclass_id
-//   };
-//   console.log(newclass);
-//   // insert into the database
-//   await knex('class').insert(newclass);
-//   res.redirect('/class');
+  const newclass = {
+    class: req.body.newclass,
+    id: req.body.studyYear_id
+  };
+  console.log(newclass);
+  console.log(newclass.yearId);
+  // insert into the database
+  // await knex('classes').returning(`${newclass.id}`)
+  await knex('classes')
+    .insert({ class: newclass.class, studyYear_id: newclass.id });
+  res.redirect(`../${newclass.id}`);
 
-//  else {
-//   res.status(500);
-//   res.render('error', { message: 'Invalid input' });
-// });
+  //  else {
+  //     res.status(500);
+  //     res.render('error', { message: 'Invalid input' });
+});
 
 module.exports = router;
