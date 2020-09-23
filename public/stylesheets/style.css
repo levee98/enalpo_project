@@ -1,12 +1,71 @@
+
+
 body {
+  background-color: brown;
   justify-content: center;
-  margin-top: 3em;
+  text-align: center;
+  margin-top: 30px;
   padding: 50px;
   font-family: 'Montserrat Alternates', sans-serif;
   font: 14px 'Montserrat Alternates', sans-serif;
-  background-color: brown;
 }
 
-a {
-  color: #00B7FF;
+a:hover {
+  text-decoration: none
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	background-color: #111;
+}
+
+.title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	letter-spacing: 1px;
+}
+
+h1 {
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 70px;
+	line-height: .75;
+	margin: 10px 0;
+}
+/* styling my button */
+
+h2 {
+	color: #eee
+}
+
+label {
+	color: #eee
+}
+
+.white-mode {
+	text-decoration: none;
+	padding: 7px 10px;
+	background-color: #122;
+	border-radius: 3px;
+	color: #FFF;
+	transition: .35s ease-in-out;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	font-family: "Montserrat";
+}
+
+.white-mode:hover {
+	background-color: #FFF;
+	color: #122;
 }

@@ -42,17 +42,17 @@ router.get('/:id/class/:id', async (req, res, next) => {
   const clasS = await knex('classes').select('class').where('classes.id', id);
   console.log('Class: ', clasS[0].class);
   await knex('students')
-    .select('students.*', 'classes.studyYear_id as yearId', 'classes.id as classId',
-      'classes_id as classId', 'classes.class as className').from('students')
-    // .select('students.*', 'firstName', 'lastName', 'classes.class', 'classes.id as classId').from('students')
+    // .select('students.*', 'classes.studyYear_id as yearId', 'classes.id as classId',
+    //   'classes_id as classId', 'classes.class as className').from('students')
+    .select('students.*', 'firstName', 'lastName', 'classes.class', 'classes.id as classId').from('students')
     // .select('students.*', 'classes.class', 'classes.id as classId', 'studyYear.studyYear', 'studyYear.id as yearId').from('students')
     .join('classes', 'classes.id', '=', 'students.classes_id')
     // .join('studyYear', 'studyYear.id', '=', 'studyYear_id')
     .where('classes_id', id)
     .then(studentS => {
       console.log(('className: ', studentS));
-      // console.log(('stundentS: ', studentS[0].className));
-      // res.render('students', { title: 'Hi', students: studentS });
+      console.log(('stundentS: ', studentS[0].className));
+      res.render('students', { title: 'Hi', students: studentS });
       res.render('students', { title: `${clasS[0].class}`, classes: studentS });
       // res.render('students', { title: `${studentS[0].className}`, students: studentS });
     });
