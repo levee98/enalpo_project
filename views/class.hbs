@@ -19,7 +19,10 @@
     </label>
     <input type="text" class="form-control" name="newclass" id="newclass"
       placeholder="Kérem, írja be az új osztály megnevezését!">
-    <input type="text" class="form-control" name="yearId" id="year_id" placeholder="Adja meg a tanévet">
+    {{!-- {{#with classes}} --}}
+    {{!-- <input type="text" class="form-control" name="{{studyYear_id}}" id="{{studyYear_id}}"
+      placeholder="Adja meg a tanévet"> --}}
+    {{!-- {{/with}} --}}
   </div>
   <button type="submit" class="btn btn-default btn-success">Osztály hozzáadása a(z) {{ title }} tanévhez.</button>
 </form>

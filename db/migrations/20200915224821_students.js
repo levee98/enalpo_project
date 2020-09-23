@@ -16,7 +16,9 @@ exports.up = function (knex) {
     table.timestamp('created_at').defaultTo(knex.fn.now());
     table.timestamp('updated_at').defaultTo(knex.fn.now());
     table.integer('studyYear_id').unsigned().references('id').inTable('studyYear');
+    // table.integer('studyYear_id').unsigned().references('id').inTable('studyYear').onUpdate('CASCADE');
     table.integer('classes_id').unsigned().references('id').inTable('classes');
+    // table.integer('classes_id').unsigned().references('id').inTable('classes').onUpdate('CASCADE');
   });
 };
 
